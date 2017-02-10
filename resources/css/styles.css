@@ -1,0 +1,49 @@
+/* Main */
+body {
+		background: #f5f7fa;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+		color: #52575c;
+		line-height: 1.75em;
+		font-size: 14pt;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 300;
+		color: #52575c;
+	}
+
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	h2 {
+		font-size: 2em;
+		line-height: 1.25em;
+	}
+
+	h3 {
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+
+/* Header Styles */
+	#nav {
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 4em;
+		line-height: 4em;
+	}
+
+		#nav > ul {
+			margin: 0;
+		}
+
+			#nav > ul > li {
+				display: inline-block;
+				margin-left: 1em;
+			}
