@@ -1930,8 +1930,8 @@
 	#header-wrapper {
 		position: relative;
 		padding: 4em 0 2em 0;
-		background-image: url("img/overlay.png"), url("img/header.svg"), linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
-		background-color: #f08c89;
+		background-image: url("img/overlay.png"), url("img/header.svg"), linear-gradient(75deg, #7CC7C0 15%, #639F99 55%);
+		background-color: #7CC7C0;
 		background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
 		background-repeat: repeat, no-repeat, no-repeat;
@@ -2127,7 +2127,7 @@
 		#hero .button {
 			background: #fff;
 			border-color: rgba(255, 255, 255, 0);
-			color: #f08c89;
+			color: #598F89;
 			font-size: 1.25em;
 		}
 
