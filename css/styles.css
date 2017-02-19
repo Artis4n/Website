@@ -1930,8 +1930,8 @@
 	#header-wrapper {
 		position: relative;
 		padding: 4em 0 2em 0;
-		background-image: url("img/overlay.png"), url("img/header.svg"), linear-gradient(75deg, #7CC7C0 15%, #639F99 55%);
-		background-color: #7CC7C0;
+		background-image: url("img/overlay.png"), url("img/header.svg"), linear-gradient(75deg, #7fbbd2 15%, #cce4ed 55%);
+		background-color: #0078A5;
 		background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
 		background-repeat: repeat, no-repeat, no-repeat;
