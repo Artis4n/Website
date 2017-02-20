@@ -2131,7 +2131,7 @@
 		#hero .button {
 			background: #fff;
 			border-color: rgba(255, 255, 255, 0);
-			color: #598F89;
+			color: #96cfe4;
 			font-size: 1.25em;
 		}
 
@@ -2173,7 +2173,7 @@
 		#promo .button {
 			background: #fff;
 			border-color: rgba(255, 255, 255, 0);
-			color: #27636B;
+			color: #96cfe4;
 			font-size: 1.25em;
 		}
 
@@ -2188,6 +2188,12 @@
 	#main {
 		padding-bottom: 4em;
 	}
+
+/* Map */
+	#map {
+        height: 500px;
+        width: 100%;
+       }
 
 /* Sidebar */
 
@@ -2223,7 +2229,7 @@
 		border-top: solid 1px #d2d7dc;
 		color: #a2a7ac;
 		padding-top: 4em;
-		margin-top: 6em;
+		margin-top: 5em;
 	}
 
 /* Normal */
