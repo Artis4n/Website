@@ -2003,6 +2003,20 @@
 		line-height: 4em;
 	}
 
+	#nav a:hover {
+		opacity: 0.50;
+	}
+
+	#nav li a.current{
+			line-height: 4em;
+   			background: rgba(255, 255, 255, 0.15);
+			border: solid 1px;
+			border-color: #fff;
+			border-color: rgba(255, 255, 255, 0.75);
+			border-radius: 0.35em 0.35em 0.35em 0.35em;
+			color: #fff;
+		}
+
 		#nav > ul {
 			margin: 0;
 		}
@@ -2347,23 +2361,6 @@
 
 				#hero p br {
 					display: none;
-				}
-
-		/* Promo */
-
-			#promo {
-				padding: 1.75em 2.5em 1.75em 2.5em;
-				display: inline-block;
-			}
-
-				#promo .button {
-					font-size: 1.25em;
-				}
-
-				#promo h2 {
-					display: block;
-					margin: 0 0 1em 0;
-					font-size: 1.5em;
 				}
 
 		/* Copyright */
