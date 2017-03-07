@@ -41,6 +41,36 @@
 		-webkit-text-size-adjust: none;
 	}
 
+/* Social media icons */
+	.socialmediaicons .fa:hover {
+	  color:white;
+	  opacity:0.8;
+	}
+	.socialmediaicons .fa {
+	  padding: 20px;
+	  font-size: 30px;
+	  width: 70px;
+	  text-align: center;
+	  text-decoration: none;
+	  margin: 5px 2px;
+	}
+
+	.socialmediaicons .fa-facebook {
+	  background: #3B5998;
+	  color: white;
+	}
+
+	.socialmediaicons .fa-linkedin {
+	  background: #007bb5;
+	  color: white;
+	}
+
+	.socialmediaicons .fa-github {
+	  background: #24292e;
+	  color: white;
+	}
+
+
 /* Box Model */
 
 	*, *:before, *:after {

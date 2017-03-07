@@ -7,6 +7,86 @@ google.maps.event.addDomListener(window, 'resize', function() {
 });
 
 
+
+function summonerLookUp() {
+    var SUMMONER_ID = "34348895";
+    var API_KEY = "03fbc237-8d27-4de4-9a25-b0267373973c";
+    var div = document.getElementById('stuff');
+    var combine = "";
+ 
+    getStuff(SUMMONER_ID, combine, API_KEY, div);
+}
+
+function getStuff(SUMMONER_ID, combine, API_KEY, div) {
+    var Topuser = SUMMONER_ID;
+    $.ajax({
+        url: 'https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/' + SUMMONER_ID + '/entry?api_key=' + API_KEY,
+        type: 'GET',
+        dataType: 'json',
+        async: false,
+        data: {},
+        success: function (json) {
+            var user = Topuser;
+            if (typeof json[user][0].queue != "undefined") {
+                if (json[user][0].queue == "RANKED_SOLO_5x5") {
+                    combine = json[user][0].tier + " - " + json[user][0].entries[0].division + " at " + json[user][0].entries[0].leaguePoints + " LP";
+                    div.innerHTML = div.innerHTML + "<br />"  + combine;
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            var user = Topuser;
+            console.log(errorThrown);
+            if (errorThrown === "Not Found")
+            {
+                div.innerHTML = div.innerHTML + "<br />" + ": " + user + " " + "UNRANKED";
+            }            
+        }
+    });
+}
+
+
+//Loading academic grades from object
+var obj = {"data": [
+{
+ "Secure Web Application Development:": "NA",
+ "Telematics:": "NA",
+ "Front-End Web Development:": "NA",
+ "Fuzzy Logic and Knowledge Based Systems (AI):": "NA",
+ "Privacy and Data Protection:": "NA",
+ "Computing Project:": "NA",
+},
+
+{
+ "<br />Organisations, Project Management and Research:": 71,
+ "OO Software Design and Development:": 81,
+ "Multi-tier Web Applications:": 62,
+ "Data Structures and Algorithms:": 79,
+},
+
+{
+  "<br />Programming in C:": 85,
+  "Computer Ethics, Law and Portfolio:": 77,
+  "Elements of Computing:": 76,
+  "Computational Modelling:": 85,
+}
+
+
+]}
+var divId = document.getElementById("grades")
+for(var i=0;i<obj.data.length;i++)
+for(var keys in obj.data[i]){
+ console.log(keys +"\n %"+obj.data[i][keys]);
+ divId.innerHTML = divId.innerHTML + "<br />"+ keys +"\n "+obj.data[i][keys] + "%";
+}
+
+//Displaying div on button click
+function showDiv() {
+   document.getElementById('grades').style.display = "block";
+}
+
+
+// Smooth transitioning 
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

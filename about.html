@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="no-sidebar">
 	<div id="page-wrapper">
@@ -43,18 +44,27 @@
 							<p>My name is Adam Hai. I live in London in the United Kingdom and I have been interested in computer programming since the age of 13.
 								Mainly I program in Java, C and PHP however I also have some experience in C++, C#, MATLAB, Haskell, x86 Assembly and Bash.</p>
 
-							<p>I am in my final year at De Montfort University, studying for a bachelor's degree in Computer Science. My dissertation, entitled "Analysis and design of combinational logic",
+							<p>I am in my final year at De Montfort University, studying for a bachelor's degree in Computer Science. My dissertation, entitled "Analysis and design of combinational logic circuits",
 								is soon to be available as a PDF file.</p>
 
 							<p>Currently I am a student, but will be working as a software engineer for a multinational information technology consulting corporation in autumn</p> 
+
+							<div id="grades"  style="display:none;" class="answer_list" ></div>
+							<input type="button" name="answer" value="View Academic Grades" onclick="showDiv()" />
+
 						</article>
 						<article id="content">
 						<header>
 							<h2>Social networks</h2>
 							</header>
 							<p>You can find me on the following social networks:</p>
+							<div class="socialmediaicons">
+								<a href="https://www.facebook.com/adam.hai" class="fa fa-facebook"></a>
+								<a href="https://www.linkedin.com/in/adam-hai-3668b3a1/" class="fa fa-linkedin"></a>
+								<a href="https://github.com/Artis4n" class="fa fa-github"></a>
+							</div>
 						</article>
-						<article id="content">
+					<article id="content">
 						<header>
 							<h2>Email</h2>
 							</header>
@@ -65,7 +75,7 @@
 										<div class="6u 12u(mobile)">
 											<input name="name" placeholder="Name" type="text" />
 										</div>
-										<div class="6u 6u(mobile)">
+										<div class="6u 12u(mobile)">
 											<input name="email" placeholder="Email" type="text" />
 										</div>
 									</div>
