@@ -7,11 +7,28 @@ google.maps.event.addDomListener(window, 'resize', function() {
 });
 
 
+// Smooth transitioning animation
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
+
+//Using RIOT Games API to get stats of my league of legends account 
 function summonerLookUp() {
     var SUMMONER_ID = "34348895";
     var API_KEY = "03fbc237-8d27-4de4-9a25-b0267373973c";
-    var div = document.getElementById('stuff');
+    var div = document.getElementById('rank');
     var combine = "";
  
     getStuff(SUMMONER_ID, combine, API_KEY, div);
@@ -29,8 +46,10 @@ function getStuff(SUMMONER_ID, combine, API_KEY, div) {
             var user = Topuser;
             if (typeof json[user][0].queue != "undefined") {
                 if (json[user][0].queue == "RANKED_SOLO_5x5") {
-                    combine = json[user][0].tier + " - " + json[user][0].entries[0].division + " at " + json[user][0].entries[0].leaguePoints + " LP";
-                    div.innerHTML = div.innerHTML + "<br />"  + combine;
+                    combine = "Current Ranking: " + json[user][0].tier + " - " + json[user][0].entries[0].division + "<br />" + "Current LP: " + json[user][0].entries[0].leaguePoints + " LP" + "<br />" 
+                    + "Total Wins: " + json[user][0].entries[0].wins  + "<br />"  + "Total Losses: " + json[user][0].entries[0].losses + "<br />"  
+                    + "Win/Loss Percentage: " + json[user][0].entries[0].wins / (json[user][0].entries[0].wins + json[user][0].entries[0].losses) * 100 + "%";
+                    div.innerHTML = combine;
                 }
             }
         },
@@ -84,23 +103,6 @@ for(var keys in obj.data[i]){
 function showDiv() {
    document.getElementById('grades').style.display = "block";
 }
-
-
-// Smooth transitioning 
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
 
 
 function init() {
