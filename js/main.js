@@ -23,7 +23,6 @@ $(function() {
   });
 });
 
-
 //Using RIOT Games API to get stats of my league of legends account 
 function summonerLookUp() {
     var SUMMONER_ID = "34348895";
@@ -31,10 +30,10 @@ function summonerLookUp() {
     var div = document.getElementById('rank');
     var combine = "";
  
-    getStuff(SUMMONER_ID, combine, API_KEY, div);
+    getSummonerInfo(SUMMONER_ID, combine, API_KEY, div);
 }
 
-function getStuff(SUMMONER_ID, combine, API_KEY, div) {
+function getSummonerInfo(SUMMONER_ID, combine, API_KEY, div) {
     var Topuser = SUMMONER_ID;
     $.ajax({
         url: 'https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/' + SUMMONER_ID + '/entry?api_key=' + API_KEY,
@@ -93,11 +92,15 @@ var obj = {"data": [
 
 ]}
 var divId = document.getElementById("grades")
+
+if(document.getElementById("grades") != null) {
 for(var i=0;i<obj.data.length;i++)
 for(var keys in obj.data[i]){
  console.log(keys +"\n %"+obj.data[i][keys]);
  divId.innerHTML = divId.innerHTML + "<br />"+ keys +"\n "+obj.data[i][keys] + "%";
+    }
 }
+
 
 //Displaying div on button click
 function showDiv() {
