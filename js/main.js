@@ -223,7 +223,9 @@ function init() {
     var mapElement = document.getElementById('map');
 
     // Create the Google Map using out element and options defined above
-    map = new google.maps.Map(mapElement, mapOptions);
+    if(document.getElementById("map") != null) {
+        map = new google.maps.Map(mapElement, mapOptions);
+    }
 
     // Map Marker Icon
     var myLatLng = new google.maps.LatLng(52.629143, -1.139432);
