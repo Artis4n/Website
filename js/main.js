@@ -47,7 +47,7 @@ function getSummonerInfo(SUMMONER_ID, combine, API_KEY, div) {
                 if (json[user][0].queue == "RANKED_SOLO_5x5") {
                     combine = "Current Ranking: " + json[user][0].tier + " - " + json[user][0].entries[0].division + "<br />" + "Current LP: " + json[user][0].entries[0].leaguePoints + " LP" + "<br />" 
                     + "Total Wins: " + json[user][0].entries[0].wins  + "<br />"  + "Total Losses: " + json[user][0].entries[0].losses + "<br />"  
-                    + "Win/Loss Percentage: " + json[user][0].entries[0].wins / (json[user][0].entries[0].wins + json[user][0].entries[0].losses) * 100 + "%";
+                    + "Win/Loss Percentage: " + Math.round(json[user][0].entries[0].wins / (json[user][0].entries[0].wins + json[user][0].entries[0].losses) * 100) + "%";
                     div.innerHTML = combine;
                 }
             }
