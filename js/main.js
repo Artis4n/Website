@@ -1,3 +1,15 @@
+// Google Maps Scripts
+// When the window has finished loading create our google map below
+var map = null;
+
+google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'resize', function() {
+
+if(document.getElementById('map') != null) {
+    map.setCenter(new google.maps.LatLng(52.629143, -1.139432));
+}
+});
+
 // Smooth transitioning animation
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -311,11 +323,3 @@ function init() {
     });
 
 })(jQuery);
-
-// Google Maps Scripts
-var map;
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(new google.maps.LatLng(52.629143, -1.139432));
-});
