@@ -2054,15 +2054,6 @@ button:hover,
 	background-size: 128px 128px, 100% 100%, auto;
 }
 
-#promo-wrapper {
-	position: relative;
-	background-size: 192px 192px, cover;
-	background-position: top left, center center;
-	color: #fff;
-	text-align: center;
-	padding: 6em 0 6em 0;
-}
-
 #footer-wrapper {
 	-webkit-transform: translate3d(0, 0, 0);
 	position: relative;
@@ -2352,10 +2343,6 @@ button:hover,
 		padding: 8em 0 4em 0;
 	}
 
-	#promo-wrapper {
-		padding: 5em 0 5em 0;
-	}
-
 	#footer-wrapper {
 		padding: 5em 0 5em 0;
 	}
@@ -2395,10 +2382,6 @@ button:hover,
 
 	.homepage #header-wrapper {
 		padding: 5em 0 4em 0;
-	}
-
-	#promo-wrapper {
-		padding: 2em;
 	}
 
 	#footer-wrapper {
@@ -2612,10 +2595,6 @@ button:hover,
 
 	.homepage #header-wrapper {
 		padding: 3em 20px 3em 20px;
-	}
-
-	#promo-wrapper {
-		padding: 20px;
 	}
 
 	#footer-wrapper {

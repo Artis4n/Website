@@ -1,12 +1,3 @@
-// Google Maps Scripts
-var map = null;
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(new google.maps.LatLng(52.629143, -1.139432));
-});
-
-
 // Smooth transitioning animation
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -320,3 +311,11 @@ function init() {
     });
 
 })(jQuery);
+
+// Google Maps Scripts
+var map;
+// When the window has finished loading create our google map below
+google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'resize', function() {
+    map.setCenter(new google.maps.LatLng(52.629143, -1.139432));
+});
