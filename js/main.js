@@ -63,7 +63,6 @@ function getSummonerInfo(SUMMONER_ID, combine, API_KEY, div) {
     });
 }
 
-
 //Loading academic grades from object
 var obj = {"data": [
 {
